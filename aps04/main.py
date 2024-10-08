@@ -9,7 +9,7 @@ tela = pygame.display.set_mode((largura, altura))
 pygame.display.set_caption("APS04")
 
 preto = (0, 0, 0)
-vermelho = (255, 50, 133)
+cor = (255, 50, 133)
 
 
 #me senti fazendo uma tabela verdade
@@ -128,10 +128,10 @@ while rodando:
         pontos_proj.append(proj_ponto(vert, dist_proj))
     
     for aresta in arestas:
-        pygame.draw.line(tela, vermelho, pontos_proj[aresta[0]], pontos_proj[aresta[1]], 3)
+        pygame.draw.line(tela, cor, pontos_proj[aresta[0]], pontos_proj[aresta[1]], 3)
     
     for vertice in pontos_proj:
-        pygame.draw.circle(tela, vermelho, vertice, 5)
+        pygame.draw.circle(tela, cor, vertice, 5)
     
     angulo_x += velocidade_rot
     angulo_y += velocidade_rot
